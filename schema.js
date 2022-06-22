@@ -2,8 +2,8 @@ const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('test2.db');
 
 let sql = `
-select name,sql from sqlite_master where type='table';
-`;
+ insert into maker ("name") values ("HONDA");
+ `
 
 db.serialize( () => {
 	db.each( sql, (error, row) => {
