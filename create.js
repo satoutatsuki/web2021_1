@@ -2,9 +2,12 @@ const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('test2.db');
 
 let schema = `
- create table maker(
+ create table songs(
  id integer primary key,
- name text not null
+ unit_id integer not null,
+ title text not null,
+ level integer not null,
+ combo integer not null
  );
 `
 
