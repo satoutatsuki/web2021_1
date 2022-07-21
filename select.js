@@ -12,7 +12,7 @@ console.log('Error: ', error );
 return;
 }
  for( let data of row ) {
-console.log( data.id + ' : ' + data.name + ' : ' + data.title + ' : ' + data.level + ' : ' + data.combo);
+console.log( data.name + ' : ' + data.title + ' : ' + data.level + ' : ' + data.combo);
   }
 });
 });
