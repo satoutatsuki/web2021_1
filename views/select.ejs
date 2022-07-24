@@ -5,15 +5,15 @@
   <title>Show message</title>
 </head>
 <body>
-  <h2>曲ごとのコンボ数</h2>
-  <hi>unit&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;title&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;level</hi>
+  <h2>曲ごとのユニットとレベルとコンボ数</h2>
+  <hi>unit&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;title&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;level&emsp;&emsp;combo</hi>
   <table>
       <% for( let row of data ) { %>
         <tr>
             <td><%= row.name%></td>
             <td>&emsp;<%= row.title%></td>
             <td>&emsp;<%= row.level %></td>
-            <td>&emsp;<%= row.combo %></td>
+            <td>&emsp;&emsp;&emsp;<%= row.combo %></td>
         </tr>
       <% } %>
   </table>
