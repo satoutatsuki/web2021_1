@@ -5,12 +5,10 @@
 <title>Show message</title>
 </head>
 <body>
-<h2><%= data[0].songs %>の詳細</h2>
+<h2><%= data[0].songs %>ユニット曲の詳細</h2>
 <table>
-<% for( let row of data ) { %>
-<tr><td>タイトル</td><td><%= row.title %></td></tr>
-<tr><td>レベル</td><td><%= row.level %></td></tr>
-<tr><td>コンボ数</td><td><%= row.combo %></td></tr>
+<% for( let row of data ) { %> 
+<tr><td>タイトル</td><td><%= row.title %></td><td>&emsp;レベル</td><td><%= row.level %></td><td>&emsp;コンボ数</td><td><%= row.combo %></td></tr>
 <% } %>
 </table>
 </body>

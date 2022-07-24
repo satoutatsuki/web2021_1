@@ -1,7 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
   const db = new sqlite3.Database('test2.db');
 let sql = `
-select unit.name ,unit.id,songs.title, songs.level, songs.combo
+select unit.name ,unit.id,songs.title, songs.level, songs.combo, songs.unit_id
 from unit inner join songs
 on unit.id=songs.unit_id;
  `
