@@ -6,13 +6,14 @@
 </head>
 <body>
   <h2>曲ごとのコンボ数</h2>
+  <hi>unit&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;title&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;level</hi>
   <table>
       <% for( let row of data ) { %>
         <tr>
             <td><%= row.name%></td>
-            <td><%= row.title%></td>
-            <td><%= row.level %></td>
-            <td><%= row.combo %></td>
+            <td>&emsp;<%= row.title%></td>
+            <td>&emsp;<%= row.level %></td>
+            <td>&emsp;<%= row.combo %></td>
         </tr>
       <% } %>
   </table>
