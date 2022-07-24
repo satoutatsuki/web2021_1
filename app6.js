@@ -23,21 +23,12 @@ app.get("/db", (req, res) => {
         })
     })
 })
-app.get("/db/:id", (req, res) => {
-db.serialize( () => {
-db.all("select name, title, level, combo from example where id=" + req.params.id + ";", (error, row) => {
-if( error ) {
-res.render('show', {mes:"エラーです"});
-}
-res.render('db', {data:row});
-})
-})
-})
+
 app.get("/top", (req, res) => {
     //console.log(req.query.pop);    // ①
     let desc = "";
     if( req.query.desc ) desc = " desc";
-    let sql = "select title, lelel, combo from example order by combo" + desc + " limit " + req.query.pop + ";";
+    let sql = "select title, lelel, combo from songs order by combo ;";
     //console.log(sql);    // ②
     db.serialize( () => {
         db.all(sql, (error, data) => {
@@ -52,4 +43,4 @@ app.get("/top", (req, res) => {
 app.use(function(req, res, next) {
   res.status(404).send('ページが見つかりません');
 });
-
+app.listen(8080, () => console.log("Example app listening on port 8080!"));
