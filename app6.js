@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.use("/public", express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
-  const message = "Hello world";
+  const message = "ユニット検索";
   res.render('show', {mes:message});
 });
 
