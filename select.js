@@ -12,7 +12,6 @@ console.log('Error: ', error );
 return;
 }
  for( let data of row ) {
-console.log(data);
 console.log( data.name + ' : ' + data.title + ' : ' + data.level + ' : ' + data.combo);
   }
 });
